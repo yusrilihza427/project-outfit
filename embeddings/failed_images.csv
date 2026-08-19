@@ -1,0 +1,12 @@
+id,nama_gambar,error
+123,img0123.jpg,[Errno 2] No such file or directory: 'dataset\\img0123.jpg'
+124,img0124.jpg,[Errno 2] No such file or directory: 'dataset\\img0124.jpg'
+127,img0127.jpg,[Errno 2] No such file or directory: 'dataset\\img0127.jpg'
+129,img0129.jpg,[Errno 2] No such file or directory: 'dataset\\img0129.jpg'
+130,img0130.jpg,[Errno 2] No such file or directory: 'dataset\\img0130.jpg'
+131,img0131.jpg,[Errno 2] No such file or directory: 'dataset\\img0131.jpg'
+1462,img1462.jpg,[Errno 2] No such file or directory: 'dataset\\img1462.jpg'
+1539,img1539.jpg,[Errno 2] No such file or directory: 'dataset\\img1539.jpg'
+1741,img1741.jpg,[Errno 2] No such file or directory: 'dataset\\img1741.jpg'
+4428,img4428.jpg,[Errno 2] No such file or directory: 'dataset\\img4428.jpg'
+5690,img5690.jpg,[Errno 2] No such file or directory: 'dataset\\img5690.jpg'

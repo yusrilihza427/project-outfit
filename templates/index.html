@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CIWIFITS AI | AI Outfit Recommendation</title>
+
+    <meta name="description"
+        content="Discover your perfect outfit with AI based on activity, undertone, and hijab preference.">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="{{ url_for('static', filename='icons/favicon.png') }}">
+
+</head>
+
+<body>
+
+    <!-- =========================================
+                HEADER
+    ========================================== -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="#hero" class="logo">
+
+                <img src="{{ url_for('static', filename='icons/logo.png') }}"
+                    alt="CIWIFITS AI">
+
+            </a>
+
+            <nav class="nav-menu">
+
+                <a href="#hero">Home</a>
+
+                <a href="#about">About</a>
+
+                <a href="#recommendation">Recommendation</a>
+
+                <a href="#tips">Fashion Tips</a>
+
+            </nav>
+
+            <a href="#recommendation"
+                class="nav-button">
+
+                Try AI
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- =========================================
+                MAIN
+    ========================================== -->
+
+    <main>
+
+        <!-- =========================================
+                    HERO
+        ========================================== -->
+
+        <section
+            id="hero"
+            class="hero">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <!-- LEFT -->
+
+                    <div class="hero-text">
+
+                        <div class="hero-badge">
+
+                            ✨ Your Personal AI Fashion Bestie
+
+                        </div>
+
+                        <h1 class="hero-title">
+
+                            Dress Cute.
+
+                            <br>
+
+                            <span>Feel Confident.</span>
+
+                            <br>
+
+                            Powered by AI.
+
+                        </h1>
+
+                        <p class="hero-description">
+
+                            CIWIFITS AI helps women discover outfit
+                            recommendations based on daily activity,
+                            skin undertone, and hijab preference using
+                            Artificial Intelligence.
+
+                        </p>
+
+                        <div class="hero-buttons">
+
+                            <a href="#recommendation"
+                                class="btn-primary">
+
+                                💖 Find My Outfit
+
+                            </a>
+
+                            <a href="#about"
+                                class="btn-secondary">
+
+                                Learn More
+
+                            </a>
+
+                        </div>
+
+                        <div class="hero-stats">
+
+                            <div class="stat-item">
+
+                                <h3>AI</h3>
+
+                                <span>Recommendation</span>
+
+                            </div>
+
+                            <div class="stat-item">
+
+                                <h3>3+</h3>
+
+                                <span>Preferences</span>
+
+                            </div>
+
+                            <div class="stat-item">
+
+                                <h3>Fast</h3>
+
+                                <span>Similarity Search</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT -->
+
+                    <div class="hero-image">
+
+                        <div class="hero-glow"></div>
+
+                        <img
+                            src="{{ url_for('static', filename='illustrations/hero.png') }}"
+                            alt="Hero Illustration">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+                    ABOUT
+        ========================================== -->
+
+        <section
+            id="about"
+            class="about">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-badge">
+
+                        Why Choose Us
+
+                    </span>
+
+                    <h2 class="section-title">
+
+                        Why CIWIFITS AI?
+
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        Personalized outfit recommendations
+                        designed specifically for your style,
+                        activity, and skin undertone.
+
+                    </p>
+
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-card">
+
+                        <div class="about-icon">
+
+                            🤖
+
+                        </div>
+
+                        <h3>
+
+                            AI Recommendation
+
+                        </h3>
+
+                        <p>
+
+                            Uses AI similarity search to recommend
+                            outfits that closely match your
+                            preferences.
+
+                        </p>
+
+                    </div>
+
+                    <div class="about-card">
+
+                        <div class="about-icon">
+
+                            🎨
+
+                        </div>
+
+                        <h3>
+
+                            Undertone Matching
+
+                        </h3>
+
+                        <p>
+
+                            Outfit colors are adjusted to your
+                            selected undertone for a more harmonious
+                            appearance.
+
+                        </p>
+
+                    </div>
+
+                    <div class="about-card">
+
+                        <div class="about-icon">
+
+                            👗
+
+                        </div>
+
+                        <h3>
+
+                            Activity Based
+
+                        </h3>
+
+                        <p>
+
+                            Recommendations are tailored to your
+                            daily activities, from campus to dinner.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+                    RECOMMENDATION
+        ========================================== -->
+
+        <section id="recommendation" class="recommendation">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-badge">
+
+                        AI Recommendation
+
+                    </span>
+
+                    <h2 class="section-title">
+
+                        Find Your Perfect Outfit
+
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        Select your preferences and let CIWIFITS AI
+                        recommend outfits that best match your style.
+
+                    </p>
+                    
+                </div>
+
+                <div class="recommendation-box">
+
+                    <form id="recommendForm">
+
+                        <div class="form-group">
+
+                            <label for="activity">
+
+                                Daily Activity
+
+                            </label>
+
+                            <select id="activity">
+                                <option value="" disabled selected>
+                                    Select your activity
+                                </option>
+
+                                <option value="smart_casual">
+                                    Smart Casual
+                                </option>
+
+                                <option value="coffee_shop_hopping">
+                                    Coffee Shop Hopping
+                                </option>
+
+                                <option value="gym_to_caffe">
+                                    Gym to Caffe
+                                </option>
+
+                                <option value="dinner">
+                                    Dinner
+                                </option>
+
+                                <option value="hiking">
+                                    Hiking
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="undertone">
+
+                                Skin Undertone
+
+                            </label>
+
+                            <select id="undertone" name="undertone">
+
+                                <option value="">Select Undertone</option>
+
+                                <option value="warm">Warm</option>
+
+                                <option value="cool">Cool</option>
+
+                                <option value="neutral">Neutral</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="hijab">
+
+                                Hijab Preference
+
+                            </label>
+
+                            <select id="hijab" name="hijab">
+
+                                <option value="">Select Preference</option>
+
+                                <option value="ya">Hijab</option>
+
+                                <option value="tidak">Non Hijab</option>
+
+                            </select>
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="submit-btn">
+
+                            💖 Find My Outfit
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+                    LOADING
+        ========================================== -->
+
+        <section class="loading" id="loading">
+
+            <div class="loading-circle"></div>
+
+            <h3>
+
+                Finding Your Perfect Outfit...
+
+            </h3>
+
+            <p>
+
+                AI is matching outfits just for you ✨
+
+            </p>
+
+        </section>
+
+        <!-- =========================================
+                    RESULT
+        ========================================== -->
+
+        <section
+            id="result"
+            class="result-section">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-badge">
+
+                        Recommendation Result
+
+                    </span>
+
+                    <h2 class="section-title">
+
+                        Recommended Outfits
+
+                    </h2>
+
+                </div>
+
+                <div
+                    id="recommendation-container"
+                    class="result-grid">
+
+                    <!-- Card dari JavaScript -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+                    FASHION TIPS
+        ========================================== -->
+
+        <section
+            id="tips"
+            class="tips">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-badge">
+
+                        Fashion Bestie
+
+                    </span>
+
+                    <h2 class="section-title">
+
+                        Fashion Tips 💖
+
+                    </h2>
+
+                </div>
+
+                <div class="tips-card">
+
+                    <h3>
+
+                        Today's Fashion Advice
+
+                    </h3>
+
+                    <p id="fashion-tip">
+
+                        Your AI styling tips will appear here after
+                        you receive your recommendation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================================
+                FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <img
+                    src="{{ url_for('static', filename='icons/logo.png') }}"
+                    alt="CIWIFITS AI Logo"
+                    class="footer-logo">
+
+                <h3>
+
+                    CIWIFITS AI
+
+                </h3>
+
+                <p>
+
+                    Dress Cute. Feel Confident. Powered by AI.
+
+                </p>
+
+                <div class="footer-line"></div>
+
+                <p class="copyright">
+
+                    © 2026 CIWIFITS AI.
+                    All Rights Reserved.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
