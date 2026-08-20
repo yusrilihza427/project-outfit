@@ -3,6 +3,7 @@ from utils.embedding import FashionEmbedding
 from utils.faiss_search import FaissSearch
 import time
 
+
 class RecommendationEngine:
 
     def __init__(
@@ -23,17 +24,23 @@ class RecommendationEngine:
         total_start = time.time()
 
         # ==========================
-        # Rule-Based
+        # RULE-BASED
         # ==========================
         rb_start = time.time()
 
         rb_result = self.rule_based.filter(user_input)
 
-        print(f"Candidate : {rb_result['total_candidate']}")
-        print(f"Rule-Based : {time.time() - rb_start:.2f} sec")
+        print(
+            f"Candidate : {rb_result['total_candidate']}"
+        )
+
+        print(
+            f"Rule-Based : "
+            f"{time.time() - rb_start:.2f} sec"
+        )
 
         # ==========================
-        # Text Embedding
+        # TEXT EMBEDDING
         # ==========================
         embed_start = time.time()
 
@@ -41,10 +48,13 @@ class RecommendationEngine:
             rb_result["query"]
         )
 
-        print(f"Embedding : {time.time() - embed_start:.2f} sec")
+        print(
+            f"Embedding : "
+            f"{time.time() - embed_start:.2f} sec"
+        )
 
         # ==========================
-        # FAISS Search
+        # FAISS SEARCH
         # ==========================
         faiss_start = time.time()
 
@@ -54,8 +64,14 @@ class RecommendationEngine:
             top_k=top_k
         )
 
-        print(f"FAISS : {time.time() - faiss_start:.2f} sec")
+        print(
+            f"FAISS : "
+            f"{time.time() - faiss_start:.2f} sec"
+        )
 
-        print(f"TOTAL : {time.time() - total_start:.2f} sec")
+        print(
+            f"TOTAL : "
+            f"{time.time() - total_start:.2f} sec"
+        )
 
         return results
