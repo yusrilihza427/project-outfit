@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template, send_from_directory
 from utils.recommendation import RecommendationEngine
+import os
 
 app = Flask(__name__)
 
@@ -41,7 +42,9 @@ def recommend():
         user_input,
         top_k=5
     )
-    print(results) 
+
+    print(results)
+
     return jsonify(results)
 
 
@@ -49,8 +52,9 @@ def recommend():
 # RUN FLASK
 # ==========================
 if __name__ == "__main__":
-    import os
+    port = int(os.environ.get("PORT", 5000))
+
     app.run(
         host="0.0.0.0",
-        port=int(os.environ.get("PORT", 5000))
+        port=port
     )
