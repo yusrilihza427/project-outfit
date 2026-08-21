@@ -1,0 +1,470 @@
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #fff0f6 !important;
+    color: #4a3540;
+}
+
+
+/* ================================
+   STREAMLIT BACKGROUND
+================================ */
+
+.stApp {
+    background: #fff0f6 !important;
+}
+
+.main {
+    background: #fff0f6 !important;
+}
+
+.block-container {
+    background: #fff0f6 !important;
+    max-width: 1200px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+/* Hilangkan background gelap bawaan */
+[data-testid="stAppViewContainer"] {
+    background: #fff0f6 !important;
+}
+
+[data-testid="stHeader"] {
+    background: #fff0f6 !important;
+}
+
+[data-testid="stToolbar"] {
+    background: transparent !important;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #f6c9da,
+        #fde8f0
+    );
+
+    padding: 45px 40px;
+    border-radius: 30px;
+
+    text-align: center;
+
+    margin-bottom: 70px;
+
+    box-shadow:
+        0 10px 30px rgba(190, 90, 130, 0.12);
+}
+
+.hero-title {
+    color: #b94f73;
+
+    font-size: 38px;
+    font-weight: 700;
+
+    margin: 0 0 15px 0;
+}
+
+.hero-subtitle {
+    color: #875466;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    margin: 0 auto;
+
+    max-width: 750px;
+}
+
+
+/* ================================
+   SECTION TITLE
+================================ */
+
+.section-title {
+    color: #b94f73;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   PREFERENCES
+================================ */
+
+.preferences {
+    margin-bottom: 50px;
+}
+
+.preference-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.preference-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.preference-item label {
+    color: #875466;
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================================
+   SELECT
+================================ */
+
+.preference-item select {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #e8b9ca;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #4a3540;
+
+    font-size: 15px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.preference-item select:focus {
+    border-color: #c95f83;
+
+    box-shadow:
+        0 0 0 3px rgba(201, 95, 131, 0.12);
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.recommend-button {
+    margin-top: 30px;
+
+    background: #c95f83;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 15px 25px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.recommend-button:hover {
+    background: #b94f73;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   RESULT SECTION
+================================ */
+
+.results {
+    margin-top: 50px;
+}
+
+.results-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ================================
+   OUTFIT CARD
+================================ */
+
+.outfit-card {
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid #f0d2de;
+
+    box-shadow:
+        0 8px 25px rgba(180, 80, 120, 0.08);
+
+    transition: 0.2s ease;
+}
+
+.outfit-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(180, 80, 120, 0.15);
+}
+
+.outfit-card img {
+    width: 100%;
+
+    height: 360px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.outfit-info {
+    padding: 18px;
+}
+
+.outfit-title {
+    color: #b94f73;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    margin: 0 0 8px 0;
+}
+
+.outfit-score {
+    color: #875466;
+
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+/* ================================
+   EMPTY RESULT
+================================ */
+
+.empty-result {
+    background: #ffffff;
+
+    border: 1px solid #f0d2de;
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #875466;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    text-align: center;
+
+    color: #a47788;
+
+    font-size: 13px;
+
+    margin-top: 70px;
+
+    padding-bottom: 30px;
+}
+
+
+/* ================================
+   STREAMLIT TEXT
+================================ */
+
+/* Semua teks utama */
+.stMarkdown,
+.stText,
+label,
+p,
+span {
+    color: #4a3540;
+}
+
+
+/* ================================
+   STREAMLIT SELECTBOX
+================================ */
+
+[data-baseweb="select"] > div {
+    background: #ffffff !important;
+
+    border-color: #e8b9ca !important;
+
+    color: #4a3540 !important;
+
+    border-radius: 12px !important;
+}
+
+[data-baseweb="select"] span {
+    color: #4a3540 !important;
+}
+
+
+/* Dropdown menu */
+[data-baseweb="popover"] {
+    background: #ffffff !important;
+}
+
+[data-baseweb="menu"] {
+    background: #ffffff !important;
+}
+
+[role="option"] {
+    color: #4a3540 !important;
+}
+
+[role="option"]:hover {
+    background: #fde8f0 !important;
+}
+
+
+/* ================================
+   STREAMLIT BUTTON
+================================ */
+
+.stButton > button {
+    background: #c95f83 !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+
+    border-radius: 12px !important;
+
+    padding: 12px 25px !important;
+
+    font-weight: 600 !important;
+
+    transition: 0.2s ease !important;
+}
+
+.stButton > button:hover {
+    background: #b94f73 !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   REMOVE DARK CONTAINERS
+================================ */
+
+[data-testid="stVerticalBlock"] {
+    background: transparent !important;
+}
+
+[data-testid="stHorizontalBlock"] {
+    background: transparent !important;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+    .preference-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .hero {
+        padding: 35px 20px;
+
+        border-radius: 22px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .outfit-card img {
+        height: 400px;
+    }
+}
